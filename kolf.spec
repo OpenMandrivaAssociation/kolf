@@ -1,5 +1,5 @@
 Name:		kolf
-Version:	4.13.2
+Version:	4.13.3
 Release:	1
 Epoch:		1
 Summary:	A golf game
@@ -60,6 +60,9 @@ Runtime library for Kolf.
 rm -f %{buildroot}%{_kde_libdir}/libkolfprivate.so
 
 %changelog
+* Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.13.3-1
+- New version 4.13.3
+
 * Wed Jun 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.13.2-1
 - New version 4.13.2
 
