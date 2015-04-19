@@ -1,6 +1,6 @@
 Name:		kolf
-Version:	4.14.3
-Release:	2
+Version:	15.04.0
+Release:	1
 Epoch:		1
 Summary:	A golf game
 Group:		Graphical desktop/KDE
