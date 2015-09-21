@@ -9,6 +9,7 @@ URL:		http://www.kde.org/applications/games/kolf/
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	kdelibs4-devel
+BuildRequires:  cmake(KDEGames)
 
 %description
 Kolf is a miniature golf game. The game is played from an overhead view, with
