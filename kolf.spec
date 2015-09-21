@@ -1,6 +1,6 @@
 Name:		kolf
-Version:	15.08.0
-Release:	2
+Version:	15.08.1
+Release:	1
 Epoch:		1
 Summary:	A golf game
 Group:		Graphical desktop/KDE
@@ -8,6 +8,7 @@ License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kolf/
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
+BuildRequires:	kdelibs4-devel
 
 %description
 Kolf is a miniature golf game. The game is played from an overhead view, with
