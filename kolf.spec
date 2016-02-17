@@ -1,5 +1,5 @@
 Name:		kolf
-Version:	15.12.1
+Version:	15.12.2
 Release:	1
 Epoch:		1
 Summary:	A golf game
