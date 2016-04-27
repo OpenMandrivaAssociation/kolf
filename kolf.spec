@@ -1,12 +1,12 @@
 Name:		kolf
-Version:	15.12.3
-Release:	2
+Version:	16.04.0
+Release:	1
 Epoch:		1
 Summary:	A golf game
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kolf/
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 BuildRequires:	kdelibs4-devel
 BuildRequires:  cmake(KDEGames)
