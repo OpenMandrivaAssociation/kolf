@@ -1,5 +1,5 @@
 Name:		kolf
-Version:	16.04.2
+Version:	16.04.3
 Release:	1
 Epoch:		1
 Summary:	A golf game
