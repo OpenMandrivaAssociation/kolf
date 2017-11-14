@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Name:		kolf
-Version:	17.04.2
+Version:	17.08.3
 Release:	1
 Epoch:		1
 Summary:	A golf game
@@ -27,7 +27,8 @@ Features :
 
 %files
 %{_kde_bindir}/kolf
-%{_kde_applicationsdir}/kolf.desktop
+%{_kde_applicationsdir}/org.kde.kolf.desktop
+%{_datadir}/metainfo/org.kde.kolf.appdata.xml
 %{_kde_appsdir}/kolf
 %{_kde_docdir}/*/*/kolf
 %{_kde_iconsdir}/hicolor/*/apps/kolf.png
