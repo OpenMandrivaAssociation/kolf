@@ -1,0 +1,2 @@
+addFilter("E: incoherent-version-in-name")
+addFilter("E: executable-in-library-package")
