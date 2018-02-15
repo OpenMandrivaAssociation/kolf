@@ -9,7 +9,32 @@ License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kolf/
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Source100:	%{name}.rpmlintrc
-BuildRequires:  cmake cmake(ECM) ninja
+BuildRequires:	cmake
+BuildRequires:	ninja
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Gettext)
+BuildRequires:	cmake(KF5)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5Crash)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5KDEGames)
+BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(Phonon4Qt5)
+BuildRequires:	cmake(PythonInterp)
+BuildRequires:	cmake(Qt5)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5Widgets)
+
 %define libkolfprivate %mklibname kolfprivate 4
 Obsoletes:	%{libkolfprivate}
 
