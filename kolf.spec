@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Name:		kolf
-Version:	19.08.3
+Version:	19.11.80
 Release:	1
 Epoch:		1
 Summary:	A golf game
@@ -58,8 +58,6 @@ Features :
 %{_datadir}/kolf
 %{_datadir}/icons/hicolor/*/apps/kolf.*
 %{_datadir}/kxmlgui5/kolf
-# There's no need for a libpackage for a "private library"...
-%{_libdir}/libkolfprivate.so.*
 
 %prep
 %setup -q
