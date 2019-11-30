@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Name:		kolf
-Version:	19.11.80
+Version:	19.11.90
 Release:	1
 Epoch:		1
 Summary:	A golf game
