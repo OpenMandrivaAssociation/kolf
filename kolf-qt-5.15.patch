@@ -1,0 +1,15 @@
+diff -up kolf-20.03.90/landscape.cpp.omv~ kolf-20.03.90/landscape.cpp
+--- kolf-20.03.90/landscape.cpp.omv~	2020-04-13 15:14:32.269894169 +0200
++++ kolf-20.03.90/landscape.cpp	2020-04-13 15:14:39.215972557 +0200
+@@ -564,11 +564,7 @@ Kolf::SlopeConfig::SlopeConfig(Kolf::Slo
+ 	KComboBox* typeBox = new KComboBox(this);
+ 	typeBox->addItems(g_slopeData->translatedGradientKeys);
+ 	typeBox->setCurrentIndex(slope->slopeType());
+-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+ 	connect(typeBox, QOverload<int>::of(&KComboBox::currentIndexChanged), slope, &Kolf::Slope::setSlopeType);
+-#else
+-	connect(typeBox, QOverload<int, const QString &>::of(&KComboBox::currentIndexChanged), slope, &Kolf::Slope::setSlopeType);
+-#endif
+ 	layout->addWidget(typeBox, 0, 0, 1, 2);
+ 
+ 	QCheckBox* reversed = new QCheckBox(i18n("Reverse direction"), this);

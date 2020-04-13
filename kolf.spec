@@ -8,6 +8,7 @@ Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
 URL:		http://www.kde.org/applications/games/kolf/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kolf-qt-5.15.patch
 Source100:	%{name}.rpmlintrc
 BuildRequires:	cmake
 BuildRequires:	ninja
@@ -60,7 +61,7 @@ Features :
 %{_datadir}/kxmlgui5/kolf
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %cmake_kde5
