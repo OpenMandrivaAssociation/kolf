@@ -1,13 +1,12 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Name:		plasma6-kolf
 Version:	24.01.90
-Release:	2
+Release:	1
 Summary:	A golf game
 Group:		Graphical desktop/KDE
 License:	GPLv2 and LGPLv2 and GFDL
-URL:		http://www.kde.org/applications/games/kolf/
-Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kolf-%{version}.tar.xz
-Source100:	%{name}.rpmlintrc
+URL:		https://www.kde.org/applications/games/kolf/
+Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/kolf-%{version}.tar.xz
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
