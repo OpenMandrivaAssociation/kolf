@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Name:		plasma6-kolf
-Version:	24.01.90
+Version:	24.01.95
 Release:	1
 Summary:	A golf game
 Group:		Graphical desktop/KDE
