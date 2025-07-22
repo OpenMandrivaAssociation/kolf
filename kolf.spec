@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Name:		kolf
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Summary:	A golf game
 Group:		Graphical desktop/KDE
@@ -14,8 +14,6 @@ Source0:	https://invent.kde.org/games/kolf/-/archive/%{gitbranch}/kolf-%{gitbran
 %else
 Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/kolf-%{version}.tar.xz
 %endif
-BuildRequires:	cmake
-BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Gettext)
 BuildRequires:	cmake(KF6)
@@ -47,6 +45,11 @@ BuildRequires:	cmake(Qt6Widgets)
 %define libkolfprivate %mklibname kolfprivate 4
 Obsoletes:	%{libkolfprivate}
 
+%rename plasma6-kolf
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Kolf is a miniature golf game. The game is played from an overhead view, with
 a short bar representing the golf club. Kolf features many different types of
@@ -66,20 +69,3 @@ Features :
 %{_datadir}/metainfo/org.kde.kolf.appdata.xml
 %{_datadir}/kolf
 %{_datadir}/icons/hicolor/*/apps/kolf.*
-
-%prep
-%autosetup -p1 -n kolf-%{?git:%{gitbranchd}}%{!?git:%{version}}
-
-%build
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-%ninja
-
-%install
-%ninja_install -C build
-
-# We don't need this for now
-rm -f %{buildroot}%{_kde_libdir}/libkolfprivate.so
-
-%find_lang %{name} --all-name --with-html
